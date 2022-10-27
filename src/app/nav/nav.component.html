@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" [routerLink]="['/']">
+    <img src="https://cdn.discordapp.com/attachments/1032570317283020840/1034843927146147920/ipanflix.png" width="100" height="50" alt="">
+  </a>
+  <button class="navbar-toggler  collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbar">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/films']" routerLinkActive="active">𝐌𝐨𝐯𝐢𝐞𝐬</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/series']" routerLinkActive="active">𝐒𝐞𝐫𝐢𝐞𝐬</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0" (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search" [ngModel]="search">
+      <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Submit</button>
+    </form>
+  </div>
+</nav>
